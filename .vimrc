@@ -40,10 +40,6 @@ inoremap jj <Esc>
 " Space will toggle folds!
 nnoremap <space> za
 
-" Swap ; and :  Convenient.
-nnoremap ; :
-nnoremap : ;
-
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 map N Nzz
