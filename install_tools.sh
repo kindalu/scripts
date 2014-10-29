@@ -4,6 +4,8 @@ sudo apt-get -y dist-upgrade
 sudo apt-get install tmux
 sudo apt-get install weechat
 sudo apt-get install git
+sudo apt-get install htop
+sudo apt-get install bmon
 
 #vim
 cd ~
