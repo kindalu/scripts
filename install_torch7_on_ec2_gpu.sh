@@ -22,6 +22,12 @@
     cd dp/examples
     th neuralnetwork.lua --cuda
 
+#misc optional
+sudo luarocks install https://raw.githubusercontent.com/soumith/cuda-convnet2.torch/master/ccn2-scm-1.rockspec
+cd ~
+git clone https://github.com/clementfarabet/torch-tutorials.git
+git clone https://github.com/nagadomi/kaggle-cifar10-torch7.git
+
 #references from http://techupdates.com/go/935241
 #                https://forums.aws.amazon.com/thread.jspa?messageID=558414
 #                http://torch.ch
