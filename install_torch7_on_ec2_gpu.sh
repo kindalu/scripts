@@ -6,7 +6,7 @@
     sudo dpkg -i cuda-repo-ubuntu1404_6.5-14_amd64.deb
     sudo apt-get update
     sudo apt-get install -y cuda
-    echo -e "\nexport PATH=/usr/local/cuda-6.5/bin:$PATH\n\nexport LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64" >> .bashrc
+    echo "\nexport PATH=/usr/local/cuda-6.5/bin:$PATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64" >> .bashrc
     sudo reboot
 
 #install torch7
@@ -17,16 +17,16 @@
     sudo luarocks install cunn
 
 #running the MNIST Digit Classfication on GPU
-    sudo luarocks install dp
-    git clone https://github.com/nicholas-leonard/dp.git
-    cd dp/examples
-    th neuralnetwork.lua --cuda
+    #sudo luarocks install dp
+    #git clone https://github.com/nicholas-leonard/dp.git
+    #cd dp/examples
+    #th neuralnetwork.lua --cuda
 
 #misc optional
 sudo luarocks install https://raw.githubusercontent.com/soumith/cuda-convnet2.torch/master/ccn2-scm-1.rockspec
-cd ~
-git clone https://github.com/clementfarabet/torch-tutorials.git
-git clone https://github.com/nagadomi/kaggle-cifar10-torch7.git
+#cd ~
+#git clone https://github.com/clementfarabet/torch-tutorials.git
+#git clone https://github.com/nagadomi/kaggle-cifar10-torch7.git
 
 #references from http://techupdates.com/go/935241
 #                https://forums.aws.amazon.com/thread.jspa?messageID=558414
