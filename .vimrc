@@ -35,4 +35,5 @@ inoremap jj <Esc>
 
 " Space will toggle folds!
 nnoremap <space> za
+nnoremap <tab> zfa}
 
