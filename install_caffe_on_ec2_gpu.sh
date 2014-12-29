@@ -2,7 +2,7 @@
     sudo apt-get update
     sudo apt-get -y dist-upgrade
     sudo apt-get install -y linux-image-generic
-    wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_6.5-14_amd64.deb
+    wget http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda-repo-ubuntu1404-6-5-prod_6.5-19_amd64.deb
     sudo dpkg -i cuda-repo-ubuntu1404_6.5-14_amd64.deb
     sudo apt-get update
     sudo apt-get install -y cuda
