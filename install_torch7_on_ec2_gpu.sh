@@ -1,13 +1,5 @@
 #This script should be used on Amazon EC2 g2.2xlarge server with ubuntu 14.04 trusty version
-    sudo apt-get update
-    sudo apt-get -y dist-upgrade
-    sudo apt-get install -y linux-image-generic
-    wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_6.5-14_amd64.deb
-    sudo dpkg -i cuda-repo-ubuntu1404_6.5-14_amd64.deb
-    sudo apt-get update
-    sudo apt-get install -y cuda
-    echo "\nexport PATH=/usr/local/cuda-6.5/bin:$PATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64" >> .bashrc
-    sudo reboot
+sh ./install_nvidia_cuda.sh
 
 #install torch7
     sudo curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
