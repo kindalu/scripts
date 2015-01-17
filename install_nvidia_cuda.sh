@@ -10,7 +10,7 @@
     sudo dpkg -i cuda-repo-ubuntu1404-6-5-prod_6.5-19_amd64.deb
     sudo apt-get update
     sudo apt-get install -y cuda
-    echo -e "\nexport PATH=/usr/local/cuda/bin:\$PATH\n\nexport LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH" >> .bashrc && source ~/.bashrc
+    echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
 
     #this install cudnn, you need to manually download the cudnn R1 library, and put it to your home directory from Nvidia
     cd ~
