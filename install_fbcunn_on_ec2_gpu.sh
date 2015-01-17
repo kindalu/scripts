@@ -16,6 +16,6 @@ bash install.sh
 echo "export PATH=~/torch-distro/install/bin:\$PATH; export LD_LIBRARY_PATH=~/torch-distro/install/lib:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
 curl -sk https://raw.githubusercontent.com/soumith/fblualib/master/install_all.sh | bash
 
-git clone https://github.com/torch/nn && cd nn && git checkout getParamsByDevice && luarocks make rocks/nn-scm-1.rockspec
+git clone https://github.com/torch/nn && cd nn && git checkout getParamsByDevice && sudo luarocks make rocks/nn-scm-1.rockspec
 git clone https://github.com/facebook/fbcunn.git
-cd fbcunn && luarocks make rocks/fbcunn-scm-1.rockspec # go get a coffee
+cd fbcunn && sudo luarocks make rocks/fbcunn-scm-1.rockspec # go get a coffee
