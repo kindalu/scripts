@@ -19,3 +19,6 @@ sudo curl -sk https://raw.githubusercontent.com/soumith/fblualib/master/install_
 git clone https://github.com/torch/nn && cd nn && git checkout getParamsByDevice && sudo luarocks make rocks/nn-scm-1.rockspec
 git clone https://github.com/facebook/fbcunn.git
 cd fbcunn && sudo luarocks make rocks/fbcunn-scm-1.rockspec # go get a coffee
+
+#asked to install after running
+sudo apt-get install -y GraphicsMagick
