@@ -7,6 +7,7 @@ sh ./install_nvidia_cuda.sh
     sudo luarocks install env
     sudo luarocks install cutorch
     sudo luarocks install cunn
+    sudo luarocks install cudnn
 
 sudo curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 cd ~/
