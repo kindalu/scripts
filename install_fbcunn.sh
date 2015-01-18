@@ -29,7 +29,8 @@ bash install.sh
 echo "export PATH=~/torch-distro/install/bin:\$PATH; export LD_LIBRARY_PATH=~/torch-distro/install/lib:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
 
 #Install Folly, fbthrift, thpp and fblualib
-curl -sk https://raw.githubusercontent.com/soumith/fblualib/master/install_all.sh | bash
+#modified: add sudo before bash
+curl -sk https://raw.githubusercontent.com/soumith/fblualib/master/install_all.sh | sudo bash
 
 #Install fbcunn
 mkdir ~/tmp
