@@ -1,8 +1,6 @@
 #This script should be used on Amazon EC2 g2.2xlarge server with ubuntu 14.04 trusty version
     sudo apt-get -y install build-essential
-    sudo apt-get update
     sudo apt-get -y dist-upgrade
-    sudo apt-get install -y linux-image-generic
     sudo apt-get install -y linux-generic
 
     #this version will support Nvidia GTX 980 & 970
@@ -18,4 +16,4 @@
     sudo cp cudnn-6.5-linux-R1/*.h /usr/local/cuda/include
     sudo cp cudnn-6.5-linux-R1/*.so* /usr/local/cuda/lib64
 
-    sudo reboot
+#NOW sudo reboot

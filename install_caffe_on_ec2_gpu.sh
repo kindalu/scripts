@@ -1,3 +1,6 @@
+#This script should be used on Amazon EC2 g2.2xlarge server with ubuntu 14.04 trusty version
+sh ./install_nvidia_cuda.sh
+
 cd ~
 git clone https://github.com/BVLC/caffe.git
 cd caffe/python
@@ -9,6 +12,5 @@ cp Makefile.config.example Makefile.config
 
 make all -j8
 make test
-#if you found cannot find cuda library error...please check the .bashrc is updated by "line 10" or not
 make runtest
 
