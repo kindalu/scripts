@@ -14,6 +14,8 @@ set hlsearch
 set backspace=indent,eol,start
 set listchars=tab:>-,trail:~
 set list
+set cursorline
+set autoread
 colorscheme torte
 syntax on
 
@@ -37,3 +39,4 @@ inoremap jj <Esc>
 nnoremap <space> za
 nnoremap <tab> zfa}
 
+call pathogen#infect()
