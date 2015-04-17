@@ -19,6 +19,10 @@ set autoread
 colorscheme torte
 syntax on
 
+" find the tags file recusively up until the root directory
+set tags=tags;
+set autochdir
+
 " status line
 set laststatus=2
 set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ %P
