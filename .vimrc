@@ -44,9 +44,9 @@ filetype plugin indent on
 set cindent
 set expandtab
 set smarttab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set showmatch
 set ruler
 set showcmd
@@ -102,10 +102,10 @@ map n nzz
 
 " ====== Plugins Setting ======
 " --- vim-airline ---
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 
 " --- jistr/vim-nerdtree-tabs ---
