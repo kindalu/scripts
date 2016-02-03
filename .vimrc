@@ -7,7 +7,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
+
 " Making Vim look good
 Plugin 'tomasr/molokai'
 Plugin 'reewr/vim-monokai-phoenix'
@@ -31,6 +32,8 @@ Plugin 'HTML-AutoCloseTag'
 Plugin 'airblade/vim-gitgutter'
 Bundle 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 
@@ -138,4 +141,10 @@ augroup mydelimitMate
   au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
+
+" --- YouCompleteMe ---
+let g:ycm_confirm_extra_conf = 0
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
