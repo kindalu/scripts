@@ -1,5 +1,36 @@
 set nocompatible
-set number
+
+
+" --- set up Vundle ---
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+" Making Vim look good
+Plugin 'tomasr/molokai'
+
+" Vim as a programmer's text editor
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Plugin 'jez/vim-c0'
+Plugin 'jez/vim-ispc'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'HTML-AutoCloseTag'
+
+call vundle#end()
+
+filetype plugin indent on
+
+
+" --- General Setting ---
 set cindent
 set expandtab
 set smarttab
@@ -7,31 +38,37 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set showmatch
+set ruler
+set showcmd
 set incsearch
+set hlsearch
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,utf-16,big5,cp950,cp936,gb18030,euc-jp,euc-kr,latin1
-set hlsearch
 set backspace=indent,eol,start
 set listchars=tab:>-,trail:~
 set list
-set cursorline
-set autoread
-colorscheme torte
+set regexpengine=1
+set mouse=a
 syntax on
 
-" find the tags file recusively up until the root directory
-set tags=tags;
-set autochdir
-
-" status line
+set background=dark
+colorscheme torte
 set laststatus=2
 set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ %P
+
 
 " disable arrow keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+"imap <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
+
+map K 10k
+map J 10j
 
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
@@ -41,6 +78,44 @@ inoremap jj <Esc>
 
 " Space will toggle folds!
 nnoremap <space> za
-nnoremap <tab> zfa}
+vnoremap <space> zf
+set foldmethod=indent
+set foldlevelstart=20
 
-call pathogen#infect()
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+map N Nzz
+map n nzz
+
+" ====== Plugins Setting ======
+
+" ----- jistr/vim-nerdtree-tabs -----
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 0
+
+" ----- scrooloose/syntastic settings -----
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+let g:airline#extensions#tmuxline#enabled = 0
+augroup mySyntastic
+  au!
+  au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+" --- CtrlP ---
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" ----- Raimondi/delimitMate settings -----
+let delimitMate_expand_cr = 1
+augroup mydelimitMate
+  au!
+  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+  au FileType tex let b:delimitMate_quotes = ""
+  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
+augroup END
+
