@@ -12,6 +12,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tomasr/molokai'
 Plugin 'reewr/vim-monokai-phoenix'
 Plugin 'jaromero/vim-monokai-refined'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Vim as a programmer's text editor
 Plugin 'scrooloose/nerdtree'
@@ -26,6 +28,9 @@ Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'HTML-AutoCloseTag'
+Plugin 'airblade/vim-gitgutter'
+Bundle 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -51,10 +56,11 @@ set listchars=tab:>-,trail:~
 set list
 set regexpengine=1
 set mouse=a
+
 set t_Co=256
 colorscheme monokai-phoenix
 syntax on
-
+set guifont=Source\ Code\ Pro
 set background=dark
 set laststatus=2
 set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ %P
@@ -90,29 +96,38 @@ set foldlevelstart=20
 map N Nzz
 map n nzz
 
-" ====== Plugins Setting ======
 
-" ----- jistr/vim-nerdtree-tabs -----
+" ====== Plugins Setting ======
+" --- vim-airline ---
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+
+
+" --- jistr/vim-nerdtree-tabs ---
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 
 " To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 0
 
+
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
-let g:airline#extensions#tmuxline#enabled = 0
 let g:syntastic_javascript_checkers = ['eslint']
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
+
 " --- CtrlP ---
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 
 " ----- Raimondi/delimitMate settings -----
 let delimitMate_expand_cr = 1
