@@ -10,6 +10,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Making Vim look good
 Plugin 'tomasr/molokai'
+Plugin 'reewr/vim-monokai-phoenix'
+Plugin 'jaromero/vim-monokai-refined'
 
 " Vim as a programmer's text editor
 Plugin 'scrooloose/nerdtree'
@@ -49,10 +51,11 @@ set listchars=tab:>-,trail:~
 set list
 set regexpengine=1
 set mouse=a
+set t_Co=256
+colorscheme monokai-phoenix
 syntax on
 
 set background=dark
-colorscheme torte
 set laststatus=2
 set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ %P
 
@@ -100,6 +103,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 let g:airline#extensions#tmuxline#enabled = 0
+let g:syntastic_javascript_checkers = ['eslint']
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
@@ -108,6 +112,7 @@ augroup END
 " --- CtrlP ---
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ----- Raimondi/delimitMate settings -----
 let delimitMate_expand_cr = 1
