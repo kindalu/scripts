@@ -52,4 +52,5 @@
         }
       ],
       "vim.leader": "<space>",
+      "vim.useSystemClipboard": true
 }
