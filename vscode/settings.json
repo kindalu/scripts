@@ -1,0 +1,55 @@
+{
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Monokai",
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 15,
+    "editor.fontWeight": "500",
+    "markdown.preview.lineHeight": 1.2,
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "none",
+    "workbench.editor.showTabs": false,
+    "workbench.list.keyboardNavigation": "filter",
+    "editor.renderIndentGuides": false,
+    "workbench.iconTheme": null,
+    "editor.glyphMargin": false,
+    "editor.renderLineHighlight": "all",
+    "editor.cursorBlinking": "solid",
+    "editor.detectIndentation": false,
+    "explorer.openEditors.visible": 0,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<tab>"],
+          "commands": [
+                "workbench.action.focusSideBar",
+           ]
+        },
+        {
+          "before": ["<right>"],
+          "commands": [
+                "workbench.action.nextEditor",
+           ]
+        },
+        {
+          "before": ["<left>"],
+          "commands": [
+                "workbench.action.previousEditor",
+           ]
+        },
+        {
+          "before": ["<"],
+          "commands": [{"command": "editor.fold"}]
+        },
+        {
+          "before": [">"],
+          "commands": [{"command": "editor.unfold"}]
+        }
+      ],
+      "vim.leader": "<space>",
+}
