@@ -76,14 +76,4 @@
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
-    "svelte.plugin.css.colorPresentations.enable": false,
-    "svelte.plugin.css.documentColors.enable": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features",
-        "compilerOptions": {
-            "noImplicitAny": true,
-        },
-    },
-    "svelte.plugin.typescript.diagnostics.enable": false,
-    "typescript.validate.enable": false
 }
