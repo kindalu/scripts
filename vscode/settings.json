@@ -1,5 +1,6 @@
 {
     "window.zoomLevel": 1,
+
     "editor.fontFamily": "Inconsolata",
     "editor.fontSize": 15,
     "editor.lineHeight": 15,
@@ -14,17 +15,32 @@
     "editor.renderLineHighlight": "all",
     "editor.cursorBlinking": "solid",
     "editor.renderIndentGuides": false,
+
     "workbench.colorTheme": "Monokai",
-    "markdown.preview.lineHeight": 1.2,
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
-    "workbench.editor.showTabs": false,
     "workbench.list.keyboardNavigation": "filter",
     "workbench.statusBar.visible": true,
-    "diffEditor.renderSideBySide": false,
-    "breadcrumbs.enabled": false,
     "workbench.iconTheme": null,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.tabCloseButton": "off",
+
     "explorer.openEditors.visible": 0,
+    "explorer.decorations.colors": false,
+    "diffEditor.renderSideBySide": false,
+    "markdown.preview.lineHeight": 1.2,
+    "breadcrumbs.enabled": false,
+    "workbench.colorCustomizations": {
+        "tab.inactiveBackground": "#000",
+        "tab.inactiveForeground": "#888",
+        "tab.activeBackground": "#a7e140",
+        "tab.activeForeground": "#000",
+        "editorGroupHeader.tabsBackground": "#000",
+        "editor.background": "#000",
+        "sideBar.background": "#000",
+        "statusBar.background": "#222",
+        "sideBarSectionHeader.background": "#000"
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -76,4 +92,5 @@
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
+
 }
