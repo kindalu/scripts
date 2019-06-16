@@ -1,56 +1,89 @@
 {
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Monokai",
     "editor.fontFamily": "Inconsolata",
     "editor.fontSize": 15,
     "editor.lineHeight": 15,
     "editor.fontWeight": "500",
-    "markdown.preview.lineHeight": 1.2,
-    "workbench.activityBar.visible": false,
-    "workbench.sideBar.location": "left",
-    "workbench.statusBar.visible": true,
-    "diffEditor.renderSideBySide": false,
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
     "editor.renderControlCharacters": false,
     "editor.renderWhitespace": "none",
-    "workbench.editor.showTabs": false,
-    "workbench.list.keyboardNavigation": "filter",
-    "editor.renderIndentGuides": false,
-    "workbench.iconTheme": null,
+    "editor.minimap.enabled": false,
     "editor.glyphMargin": false,
     "editor.renderLineHighlight": "all",
     "editor.cursorBlinking": "solid",
-    "editor.detectIndentation": false,
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "Monokai",
+    "markdown.preview.lineHeight": 1.2,
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "workbench.editor.showTabs": false,
+    "workbench.list.keyboardNavigation": "filter",
+    "workbench.statusBar.visible": true,
+    "diffEditor.renderSideBySide": false,
+    "breadcrumbs.enabled": false,
+    "workbench.iconTheme": null,
     "explorer.openEditors.visible": 0,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-          "before": ["<tab>"],
-          "commands": [
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
                 "workbench.action.focusSideBar",
-           ]
+            ]
         },
         {
-          "before": ["<right>"],
-          "commands": [
+            "before": [
+                "<space>"
+            ],
+            "commands": [
                 "workbench.action.nextEditor",
-           ]
+            ]
         },
         {
-          "before": ["<left>"],
-          "commands": [
-                "workbench.action.previousEditor",
-           ]
+            "before": [
+                "<left>"
+            ],
+            "commands": [
+                {
+                    "command": "editor.fold"
+                }
+            ]
         },
         {
-          "before": ["<"],
-          "commands": [{"command": "editor.fold"}]
+            "before": [
+                "<right>"
+            ],
+            "commands": [
+                {
+                    "command": "editor.unfold"
+                }
+            ]
         },
         {
-          "before": [">"],
-          "commands": [{"command": "editor.unfold"}]
+            "before": [
+                "="
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.formatDocument"
+                }
+            ]
         }
-      ],
-      "vim.leader": "<space>",
-      "vim.useSystemClipboard": true
+    ],
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
+    "svelte.plugin.css.colorPresentations.enable": false,
+    "svelte.plugin.css.documentColors.enable": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "compilerOptions": {
+            "noImplicitAny": true,
+        },
+    },
+    "svelte.plugin.typescript.diagnostics.enable": false,
+    "typescript.validate.enable": false
 }
