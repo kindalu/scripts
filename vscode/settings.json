@@ -18,7 +18,7 @@
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.list.keyboardNavigation": "filter",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.iconTheme": null,
     "workbench.editor.enablePreview": false,
     "workbench.editor.tabCloseButton": "off",
@@ -39,7 +39,7 @@
         "sideBar.border": "#643",
         "statusBar.background": "#222",
         "statusBar.foreground": "#ccc",
-        "sideBarSectionHeader.background": "#000"
+        "sideBarSectionHeader.background": "#000",  
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -67,6 +67,12 @@
             "commands": [{"command": "editor.action.formatDocument"}]
         }
     ],
+    "vim.insertModeKeyBindings": [
+        {
+          "before": ["<space>"],
+          "after": ["<space>"]
+        }
+      ],
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
     "zenMode.hideLineNumbers": false,
