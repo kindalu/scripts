@@ -39,6 +39,7 @@
         "editor.background": "#000",
         "sideBar.background": "#000",
         "statusBar.background": "#222",
+        "statusBar.foreground": "#ccc",
         "sideBarSectionHeader.background": "#000"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
