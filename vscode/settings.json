@@ -11,7 +11,7 @@
     "editor.renderWhitespace": "none",
     "editor.minimap.enabled": false,
     "editor.glyphMargin": false,
-    "editor.renderLineHighlight": "all",
+    "editor.renderLineHighlight": "none",
     "editor.cursorBlinking": "solid",
     "editor.renderIndentGuides": false,
     "workbench.colorTheme": "Monokai",
@@ -27,57 +27,128 @@
     "diffEditor.renderSideBySide": false,
     "markdown.preview.lineHeight": 1.2,
     "breadcrumbs.enabled": false,
-    "workbench.colorCustomizations": {
-        "tab.inactiveBackground": "#000",
-        "tab.inactiveForeground": "#bbb",
-        "tab.activeBackground": "#70a038",
-        "tab.activeForeground": "#000",
-        "editorGroupHeader.tabsBackground": "#000",
-        "editor.background": "#000",
-        "sideBar.background": "#171717",
-        "sideBar.foreground": "#ddd",
-        "sideBar.border": "#643",
-        "statusBar.background": "#222",
-        "statusBar.foreground": "#ccc",
-        "sideBarSectionHeader.background": "#000",  
-    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "commands": ["workbench.action.focusSideBar"]
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.action.focusSideBar"
+            ]
         },
         {
-            "before": ["<tab>"],
-            "commands": ["workbench.action.nextEditor"]
+            "before": [
+                ","
+            ],
+            "commands": [
+                "workbench.action.nextEditor",
+                "extension.vim_escape"
+            ]
         },
         {
-            "before": [","],
-            "commands": ["workbench.action.toggleZenMode"]
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
         },
         {
-            "before": ["<left>"],
-            "commands": [{"command": "editor.fold"}]
+            "before": [
+                "<left>"
+            ],
+            "commands": [
+                {
+                    "command": "editor.fold"
+                }
+            ]
         },
         {
-            "before": ["<right>"],
-            "commands": [{"command": "editor.unfold"}]
+            "before": [
+                "<right>"
+            ],
+            "commands": [
+                {
+                    "command": "editor.unfold"
+                }
+            ]
         },
         {
-            "before": ["="],
-            "commands": [{"command": "editor.action.formatDocument"}]
+            "before": [
+                "="
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.formatDocument"
+                }
+            ]
+        },
+        {
+            "before": [
+                "/"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.inspectTMScopes"
+                }
+            ]
         }
     ],
     "vim.useSystemClipboard": true,
     "vim.leader": "<space>",
     "vim.foldfix": true,
-    "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "zenMode.centerLayout": false,
-
     "macros": {
-        "openFileAndCloseSidebar" : [
+        "openFileAndCloseSidebar": [
             "list.select",
             "workbench.action.toggleSidebarVisibility"
-        ]
-  }
+        ],
+        "focusRightGroupAndCloseSidebar": [
+            "workbench.action.focusRightGroup",
+            "workbench.action.toggleSidebarVisibility"
+        ],
+    },
+    "scm.diffDecorationsGutterWidth": 1,
+    "diffEditor.renderIndicators": false,
+    "scm.diffDecorations": "none",
+    "git.openDiffOnClick": false,
+    "window.nativeTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+    },
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "editor.tokenColorCustomizations": {
+        "[Monokai]": {
+            "comments": "#888",
+            "textMateRules": [
+                {
+                    "scope": [
+                      "meta.object-literal.key",
+                    ],
+                    "settings": {
+                      "foreground": "#E6DB74"
+                    }
+                  },
+            ]
+        }
+    },
+    "workbench.colorCustomizations": {
+        "[Monokai]": {
+            "tab.inactiveBackground": "#121212",
+            "tab.inactiveForeground": "#bbb",
+            "tab.activeBackground": "#70a038",
+            "tab.activeForeground": "#121212",
+            "editorGroupHeader.tabsBackground": "#000",
+            "editor.background": "#121212",
+            "sideBar.background": "#121212",
+            "sideBar.foreground": "#ddd",
+            "sideBar.border": "#643",
+            "statusBar.background": "#282828",
+            "statusBar.foreground": "#ccc",
+            "sideBarSectionHeader.background": "#000",
+        }
+    },
 }

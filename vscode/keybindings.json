@@ -12,12 +12,33 @@
     },
     {
         "key": "enter",
-        "command": "macros.openFileAndCloseSidebar",
+        "command": "list.select",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "space",
-        "command": "-list.toggleExpand",
+        "key": "tab",
+        "command": "workbench.action.focusRightGroup",
         "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space",
+        "command": "macros.focusRightGroupAndCloseSidebar",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
     },
 ]
