@@ -11,8 +11,13 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key":"tab",
-        "command": "workbench.action.focusRightGroup",
+        "key": "enter",
+        "command": "macros.openFileAndCloseSidebar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key":"space",
+        "command": "workbench.action.toggleSidebarVisibility",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 
     }

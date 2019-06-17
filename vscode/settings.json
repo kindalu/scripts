@@ -1,6 +1,5 @@
 {
     "window.zoomLevel": 1,
-
     "editor.fontFamily": "Inconsolata",
     "editor.fontSize": 15,
     "editor.lineHeight": 15,
@@ -15,16 +14,14 @@
     "editor.renderLineHighlight": "all",
     "editor.cursorBlinking": "solid",
     "editor.renderIndentGuides": false,
-
     "workbench.colorTheme": "Monokai",
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.list.keyboardNavigation": "filter",
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "workbench.iconTheme": null,
     "workbench.editor.enablePreview": false,
     "workbench.editor.tabCloseButton": "off",
-
     "explorer.openEditors.visible": 0,
     "explorer.decorations.colors": false,
     "diffEditor.renderSideBySide": false,
@@ -32,66 +29,54 @@
     "breadcrumbs.enabled": false,
     "workbench.colorCustomizations": {
         "tab.inactiveBackground": "#000",
-        "tab.inactiveForeground": "#888",
-        "tab.activeBackground": "#a7e140",
+        "tab.inactiveForeground": "#bbb",
+        "tab.activeBackground": "#70a038",
         "tab.activeForeground": "#000",
         "editorGroupHeader.tabsBackground": "#000",
         "editor.background": "#000",
-        "sideBar.background": "#000",
+        "sideBar.background": "#171717",
+        "sideBar.foreground": "#ddd",
+        "sideBar.border": "#643",
         "statusBar.background": "#222",
         "statusBar.foreground": "#ccc",
         "sideBarSectionHeader.background": "#000"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [
-                "<tab>"
-            ],
-            "commands": [
-                "workbench.action.focusSideBar",
-            ]
+            "before": ["<space>"],
+            "commands": ["workbench.action.focusSideBar"]
         },
         {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "workbench.action.nextEditor",
-            ]
+            "before": ["<tab>"],
+            "commands": ["workbench.action.nextEditor"]
         },
         {
-            "before": [
-                "<left>"
-            ],
-            "commands": [
-                {
-                    "command": "editor.fold"
-                }
-            ]
+            "before": [","],
+            "commands": ["workbench.action.toggleZenMode"]
         },
         {
-            "before": [
-                "<right>"
-            ],
-            "commands": [
-                {
-                    "command": "editor.unfold"
-                }
-            ]
+            "before": ["<left>"],
+            "commands": [{"command": "editor.fold"}]
         },
         {
-            "before": [
-                "="
-            ],
-            "commands": [
-                {
-                    "command": "editor.action.formatDocument"
-                }
-            ]
+            "before": ["<right>"],
+            "commands": [{"command": "editor.unfold"}]
+        },
+        {
+            "before": ["="],
+            "commands": [{"command": "editor.action.formatDocument"}]
         }
     ],
-    "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "zenMode.centerLayout": false,
 
+    "macros": {
+        "openFileAndCloseSidebar" : [
+            "list.select",
+            "workbench.action.toggleSidebarVisibility"
+        ]
+  }
 }
