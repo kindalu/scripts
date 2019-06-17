@@ -1,7 +1,6 @@
 {
     "window.zoomLevel": 1,
-    "editor.fontFamily": "Inconsolata",
-    "editor.fontSize": 15,
+    "editor.fontFamily": "Inconsolata,  Hiragino Sans",
     "editor.lineHeight": 15,
     "editor.fontWeight": "500",
     "editor.tabSize": 4,
@@ -126,12 +125,22 @@
             "textMateRules": [
                 {
                     "scope": [
-                      "meta.object-literal.key",
+                        "meta.object-literal.key",
                     ],
                     "settings": {
-                      "foreground": "#E6DB74"
+                        "foreground": "#E6DB74"
                     }
-                  },
+                },
+                {
+                    "scope": [
+                        "storage.type.js",
+                        "support.type.property-name.css",
+                        "support.type.property-name.json",
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
             ]
         }
     },
@@ -151,4 +160,5 @@
             "sideBarSectionHeader.background": "#000",
         }
     },
+    "editor.fontSize": 15,
 }
