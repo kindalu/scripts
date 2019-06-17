@@ -67,13 +67,8 @@
             "commands": [{"command": "editor.action.formatDocument"}]
         }
     ],
-    "vim.insertModeKeyBindings": [
-        {
-          "before": ["<space>"],
-          "after": ["<space>"]
-        }
-      ],
     "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
     "vim.foldfix": true,
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
