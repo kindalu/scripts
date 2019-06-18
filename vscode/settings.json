@@ -19,7 +19,6 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.tabCloseButton": "off",
     "explorer.openEditors.visible": 0,
-    "explorer.decorations.colors": false,
     "diffEditor.renderSideBySide": false,
     "markdown.preview.lineHeight": 1.2,
     "breadcrumbs.enabled": false,
@@ -191,5 +190,11 @@
     "editor.letterSpacing": 0.2,
     "editor.lightbulb.enabled": false,
     "files.trimTrailingWhitespace": true,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "editor.suggestSelection": "first",
+    "explorer.decorations.badges": false,
+    "explorer.decorations.colors": false,
+    "update.showReleaseNotes": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.tips.enabled": false,
 }
