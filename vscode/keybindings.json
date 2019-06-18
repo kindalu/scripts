@@ -17,7 +17,7 @@
     },
     {
         "key": "tab",
-        "command": "workbench.action.focusRightGroup",
+        "command": "workbench.action.focusActiveEditorGroup",/*"workbench.action.focusRightGroup",*/
         "when": "listFocus && !inputFocus"
     },
     {

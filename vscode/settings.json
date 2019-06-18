@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0.8,
     "editor.fontFamily": "Inconsolata,  Hiragino Sans",
     "editor.lineHeight": 15,
     "editor.fontWeight": "500",
@@ -14,11 +14,8 @@
     "editor.cursorBlinking": "solid",
     "editor.renderIndentGuides": false,
     "workbench.colorTheme": "Monokai",
-    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.list.keyboardNavigation": "filter",
-    "workbench.statusBar.visible": true,
-    "workbench.iconTheme": null,
     "workbench.editor.enablePreview": false,
     "workbench.editor.tabCloseButton": "off",
     "explorer.openEditors.visible": 0,
@@ -26,6 +23,7 @@
     "diffEditor.renderSideBySide": false,
     "markdown.preview.lineHeight": 1.2,
     "breadcrumbs.enabled": false,
+    "editor.colorDecorators": false,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -37,10 +35,19 @@
         },
         {
             "before": [
-                ","
+                ",", "."
             ],
             "commands": [
                 "workbench.action.nextEditor",
+                "extension.vim_escape"
+            ]
+        },
+        {
+            "before": [
+                ",", "m"
+            ],
+            "commands": [
+                "workbench.action.previousEditor",
                 "extension.vim_escape"
             ]
         },
@@ -50,6 +57,14 @@
             ],
             "commands": [
                 "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "."
+            ],
+            "commands": [
+                "extension.go-to-export"
             ]
         },
         {
@@ -94,7 +109,7 @@
         }
     ],
     "vim.useSystemClipboard": true,
-    "vim.leader": "<space>",
+    "vim.leader": ",",
     "vim.foldfix": true,
     "zenMode.hideTabs": false,
     "zenMode.centerLayout": false,
@@ -157,8 +172,24 @@
             "sideBar.border": "#643",
             "statusBar.background": "#282828",
             "statusBar.foreground": "#ccc",
-            "sideBarSectionHeader.background": "#000",
-        }
+            "sideBarSectionHeader.background": "#000"
+        },
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
     },
     "editor.fontSize": 15,
+    "vim.statusBarColorControl": true,
+    "workbench.statusBar.feedback.visible": false,
+    "window.restoreFullscreen": true,
+    "workbench.iconTheme": null,
+    "workbench.tree.indent": 16,
+    "explorer.autoReveal": false,
+    "editor.hover.enabled": false,
+    "editor.hover.sticky": false,
+    "editor.showUnused": false,
+    "editor.letterSpacing": 0.2,
+    "editor.lightbulb.enabled": false,
+    "files.trimTrailingWhitespace": true,
+    "workbench.activityBar.visible": false
 }
