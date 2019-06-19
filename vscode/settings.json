@@ -24,87 +24,29 @@
     "breadcrumbs.enabled": false,
     "editor.colorDecorators": false,
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<tab>"
-            ],
-            "commands": [
-                "workbench.action.focusSideBar"
-            ]
+        {  "before": ["<tab>"],
+           "commands": ["workbench.action.focusSideBar"]
         },
-        {
-            "before": [
-                ",", "."
-            ],
-            "commands": [
-                "workbench.action.nextEditor",
-                "extension.vim_escape"
-            ]
+        {  "before": ["<space>"],
+           "commands": ["workbench.action.toggleSidebarVisibility"]
         },
-        {
-            "before": [
-                ",", "m"
-            ],
-            "commands": [
-                "workbench.action.previousEditor",
-                "extension.vim_escape"
-            ]
+        {  "before": ["<leader>", "k"],
+           "commands": ["extension.go-to-export"]
         },
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
-            ]
+        {  "before": ["<leader>", "<leader>"],
+           "commands": ["workbench.action.navigateBack"]
         },
-        {
-            "before": [
-                "."
-            ],
-            "commands": [
-                "extension.go-to-export"
-            ]
+        {  "before": ["<left>"],
+           "commands": [{"command": "editor.fold"}]
         },
-        {
-            "before": [
-                "<left>"
-            ],
-            "commands": [
-                {
-                    "command": "editor.fold"
-                }
-            ]
+        {  "before": ["<right>"],
+           "commands": [{"command": "editor.unfold"}]
         },
-        {
-            "before": [
-                "<right>"
-            ],
-            "commands": [
-                {
-                    "command": "editor.unfold"
-                }
-            ]
+        {  "before": ["="],
+            "commands": [{"command": "editor.action.formatDocument"}]
         },
-        {
-            "before": [
-                "="
-            ],
-            "commands": [
-                {
-                    "command": "editor.action.formatDocument"
-                }
-            ]
-        },
-        {
-            "before": [
-                "/"
-            ],
-            "commands": [
-                {
-                    "command": "editor.action.inspectTMScopes"
-                }
-            ]
+        {  "before": ["/"],
+            "commands": [{"command": "editor.action.inspectTMScopes"}]
         }
     ],
     "vim.useSystemClipboard": true,
@@ -160,10 +102,6 @@
     },
     "workbench.colorCustomizations": {
         "[Monokai]": {
-            "tab.inactiveBackground": "#121212",
-            "tab.inactiveForeground": "#bbb",
-            "tab.activeBackground": "#70a038",
-            "tab.activeForeground": "#121212",
             "editorGroupHeader.tabsBackground": "#000",
             "editor.background": "#121212",
             "sideBar.background": "#121212",
@@ -197,4 +135,5 @@
     "update.showReleaseNotes": false,
     "terminal.external.osxExec": "iTerm.app",
     "workbench.tips.enabled": false,
+    "workbench.editor.showTabs": false,
 }

@@ -41,4 +41,8 @@
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward"
     },
+    {
+        "key": "cmd+down",
+        "command": "extension.go-to-export"
+    },
 ]
