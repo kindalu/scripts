@@ -1,7 +1,6 @@
 {
-    "window.zoomLevel": 0.8,
     "editor.fontFamily": "Inconsolata,  Hiragino Sans",
-    "editor.lineHeight": 15,
+    "editor.lineHeight": 18,
     "editor.fontWeight": "500",
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
@@ -12,8 +11,6 @@
     "editor.glyphMargin": false,
     "editor.renderLineHighlight": "none",
     "editor.cursorBlinking": "solid",
-    "editor.renderIndentGuides": false,
-    "workbench.colorTheme": "Monokai",
     "workbench.sideBar.location": "left",
     "workbench.list.keyboardNavigation": "filter",
     "workbench.editor.enablePreview": false,
@@ -30,11 +27,20 @@
         {  "before": ["<space>"],
            "commands": ["workbench.action.toggleSidebarVisibility"]
         },
-        {  "before": ["<leader>", "k"],
+        {  "before": ["."],
            "commands": ["extension.go-to-export"]
         },
-        {  "before": ["<leader>", "<leader>"],
-           "commands": ["workbench.action.navigateBack"]
+        {  "before": ["H"],
+           "after": ["5", "h"]
+        },
+        {  "before": ["J"],
+           "after": ["5", "j"]
+        },
+        {  "before": ["K"],
+           "after": ["5", "k"]
+        },
+        {  "before": ["L"],
+           "after": ["5", "l"]
         },
         {  "before": ["<left>"],
            "commands": [{"command": "editor.fold"}]
@@ -76,7 +82,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "never",
     "editor.tokenColorCustomizations": {
-        "[Monokai]": {
+        "[Seti Monokai]": {
             "comments": "#888",
             "textMateRules": [
                 {
@@ -101,7 +107,7 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Monokai]": {
+        "[Seti Monokai]": {
             "editorGroupHeader.tabsBackground": "#000",
             "editor.background": "#121212",
             "sideBar.background": "#121212",
@@ -115,14 +121,12 @@
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
     },
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "vim.statusBarColorControl": true,
     "workbench.statusBar.feedback.visible": false,
     "window.restoreFullscreen": true,
-    "workbench.iconTheme": null,
     "workbench.tree.indent": 16,
     "explorer.autoReveal": false,
-    "editor.hover.enabled": false,
     "editor.hover.sticky": false,
     "editor.showUnused": false,
     "editor.letterSpacing": 0.2,
@@ -136,4 +140,11 @@
     "terminal.external.osxExec": "iTerm.app",
     "workbench.tips.enabled": false,
     "workbench.editor.showTabs": false,
+    "vscode_custom_css.imports": ["Users/kinda/projects/scripts/vscode/hideTopBar.css"],
+    "vscode_custom_css.policy": true,
+    "workbench.statusBar.visible": true,
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "Seti Monokai",
+    "editor.renderIndentGuides": false,
+    "workbench.iconTheme": "simple-icons",
 }
